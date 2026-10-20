@@ -1,3 +1,7 @@
+<!-- SVENKUNKKA-README-NAV:BEGIN -->
+[中文项目说明](#project-overview-zh) · [English overview](#project-overview-en) · [维护者 X / Maintainer on X](https://x.com/Svenu1s5)
+<!-- SVENKUNKKA-README-NAV:END -->
+
 # grokbot-daily-report
 把当天的聊天、任务、日程记录整理成**日报草稿**，只生成，不发送。
 
@@ -13,3 +17,30 @@
 python scripts/collect_day.py events.ndjson --date 2026-10-15 > material.md
 ```
 每行 JSON 需包含 `time`（ISO 或毫秒时间戳）、`chat`、`sender`、`text` 中的可用字段。
+
+
+---
+
+<!-- SVENKUNKKA-PROJECT-INFO:BEGIN -->
+
+<a id="project-overview-zh"></a>
+## 中文项目说明
+
+把聊天、任务和日程的 JSON/NDJSON 导出记录按日期筛选、按会话分组，生成供 AI 整理工作日报的 Markdown 素材，并提供草稿审阅流程。
+
+**使用入口：** 运行 `python scripts/collect_day.py events.ndjson --date 2026-10-15 > material.md`；输入字段及草稿整理步骤见原说明和 `SKILL.md`。
+
+**范围说明：** 仅生成素材与草稿，不包含发送功能；飞书等来源的记录需另行导出。
+
+<a id="project-overview-en"></a>
+## English project overview
+
+Filters JSON/NDJSON chat, task, and calendar exports by date and groups them by conversation, producing Markdown material for AI-assisted daily-report drafts and review.
+
+**Getting started:** Run `python scripts/collect_day.py events.ndjson --date 2026-10-15 > material.md`; see the original instructions and `SKILL.md` for input fields and drafting steps.
+
+**Scope:** Produces material and drafts only; it contains no sending functionality. Records from Feishu or other sources must be exported separately.
+
+**仓库维护者 / Repository maintainer:** [SvenKunkka](https://github.com/SvenKunkka) · [X / Twitter](https://x.com/Svenu1s5)
+
+<!-- SVENKUNKKA-PROJECT-INFO:END -->
